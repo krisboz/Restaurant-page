@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('./assets/fonts/Roboto-Bold.ttf') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Roboto';
+    src: url('./assets/fonts/Roboto-Light.ttf') format('woff2');
+    font-weight: light;
+    font-style: normal;
+  }
+
+#content {
+    color: red;
+    font-family: "Roboto";
+    font-weight: normal;
+}
+
+
+#navbar{
+    color: green;
+}
+
+#topLogo {
+    width: 60px;
+    height: 60px;
+}
