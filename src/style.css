@@ -1,29 +1,253 @@
 @font-face {
+  font-family: 'Roboto';
+  src: url('./assets/fonts/Roboto-ThinItalic.ttf') format('woff2');
+  font-weight: thin;
+  font-style: normal;
+}
+
+@font-face {
     font-family: 'Roboto';
     src: url('./assets/fonts/Roboto-Bold.ttf') format('woff2');
     font-weight: bold;
     font-style: normal;
   }
 
+
   @font-face {
     font-family: 'Roboto';
-    src: url('./assets/fonts/Roboto-Light.ttf') format('woff2');
-    font-weight: light;
+    src: url('./assets/fonts/Roboto-Medium.ttf') format('woff2');
+    font-weight: normal;
     font-style: normal;
   }
 
-#content {
-    color: red;
+  html, body {
+    margin: 0px;
+    padding: 0px; 
+    outline: none;
+    border: 0px;
+    scroll-behavior: smooth;
+  }
+
+  li > a {
+    color: black;
+    text-decoration: none;
+  }
+
+
+  #content {
     font-family: "Roboto";
-    font-weight: normal;
+    width: 100%;
+  }
+
+  #header {
+padding-left: 80px;
+padding-right: 80px;
+
+}
+
+.headerText {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.mainLogo {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.mainLogo>img{
+  padding-top: 5px;
+  height: 80px;
+  width: 80px;
+}
+
+.mainLogo>p{
+  font-weight:normal;
+  font-size: 30px;
+}
+
+.reviews {
+  padding-right: 80px;
 }
 
 
-#navbar{
-    color: green;
+.reviewBottom{
+  color: darkgrey;
 }
 
-#topLogo {
-    width: 60px;
-    height: 60px;
+.phoneNumber {
+  font-weight: bold;
+}
+
+.phoneDescription {
+  color: darkgrey;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding-left: 60px;
+  padding-right: 60px;
+  background-color: rgb(255, 255, 255, 0.9);
+  width: 100%;
+}
+
+.sticky{
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0px 17px 28px -2px rgb(171, 171, 171, 0.5);
+  transition: 0.2s;
+}
+
+.sticky + .body_area {
+  padding-top: 60px;
+}
+.left {
+  display: flex;
+}
+.smallLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#smallLogo {
+  height: 35px;
+  width: 35px;
+  padding: 0px;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+.nav>ul {
+  display: flex;
+  gap: 25px;
+  text-decoration: none;
+  list-style-type: none;
+  font-size: 16px;
+}
+
+#shoppingCart {
+  font-size: 18px;
+  background-color: #ff553e;
+  border: none;
+  border-radius: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 12px;
+  padding-right: 12px;
+  color: white;
+}
+
+
+#body_area{
+  height: fit-content;
+  gap: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  
+}
+
+.grid-container{
+
+  display: grid;
+  gap: 4px;
+  padding: 4px;
+height: fit-content;
+
+  grid-template-rows: auto;
+  grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+}
+
+.section-container {
+  width: 80%;
+  height: fit-content;
+  padding-top: 60px;
+}
+
+
+.section-title{
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+
+.food-card {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  gap: 5px;
+}
+
+.card-title {
+  font-size: 18px;
+}
+
+.card-description{
+  color: grey;
+  font-size: 14px;
+}
+
+.card-price{
+
+}
+
+
+.card-photo{
+  height: 256px;
+  width: 256px;
+}
+
+#footer {
+  margin-top: 35px;
+
+}
+
+#footer >.bottom {
+  background-color: black;
+  color: white;
+  padding: 35px;
+  display: flex;
+  justify-content: right;
+  gap: 65px;
+}
+
+.bottom>div>a{
+  color: white;
+  text-decoration: none;
+}
+
+#footer > .top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 65px;
+  margin-bottom: 35px;
+}
+
+#footer >.top > .left, .right{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  word-wrap: break-word;
+  padding: 15px;
+}
+
+#footer>.top>.right {
+  padding-top: 139px;
 }

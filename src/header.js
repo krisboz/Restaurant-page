@@ -1,54 +1,36 @@
 import Logo from "./assets/photos/logo.png"
-
-function makeTop() {
-    const element = document.createElement("div")
-    element.setAttribute("class", "top")
-    const logo = document.createElement("div")
-    logo.setAttribute("class", "logo_name")
-    const review = document.createElement("div")
-    review.setAttribute("class", "review")
-    const number = document.createElement("div")
-    number.setAttribute("class", "number")
+import {makeElement, makePhoto} from "./HTML_helpers"
 
 
-    element.appendChild(logo)
-    element.appendChild(review)
-    element.appendChild(number)
+//All indented elements bind to the topmost unindented element
+const headerText = makeElement("div", "",  "class", "headerText")
+    const logo = makeElement("div", "", "class", "mainLogo")
+        const myLogo = new Image();
+        myLogo.src = Logo;
+        const logoText = makeElement("p", "Rico Pizza")
+    const reviews = makeElement("div", "", "class", "reviews")
+        const reviewTop = makeElement("div", "Pizza delivery worldwide", "class", "reviewTop")
+        const reviewBottom = makeElement("div", "42min 3.22*", "class", "reviewBottom")
+    const  number = makeElement("div", "", "class", "number")
+        const phoneNumber = makeElement("div", "097/632-7130", "class", "phoneNumber")
+        const phoneDescription = makeElement("div", "Call us now", "class", "phoneDescription")
 
-    const myLogo = new Image();
-    myLogo.src = Logo
-    myLogo.setAttribute("id", "topLogo")
     logo.appendChild(myLogo)
+    logo.appendChild(logoText)
+    reviews.appendChild(reviewTop)
+    reviews.appendChild(reviewBottom)
+    number.appendChild(phoneNumber)
+    number.appendChild(phoneDescription)
+    headerText.appendChild(logo)
+    headerText.appendChild(reviews)
+    headerText.appendChild(number)
 
-    return element
-}
-
-
-
-    
-
-
-
-function makeSticky() {
-
-    const element = document.createElement("div")
-    element.setAttribute("class", "sticky")
-    //smaller logo, //Pizza,  //finger food //salads //deserts  //drinks 
-    const smallLogo = document.createElement("div")
-    const menu = document.createElement("div")
-
-    element.appendChild(smallLogo)
-    element.appendChild(menu)
-    return element
-
-}
 
 export default function header() {
     const element = document.createElement("div");
     element.setAttribute("id", "header");
+    element.appendChild(headerText)
 
-    element.appendChild(makeTop())
-    element.appendChild(makeSticky())
     
     
     return element
@@ -57,6 +39,3 @@ export default function header() {
 //populate the header
 //Logo i name    // Pizza Delivery Worldwide, 42min 4.12stars
 //number and call us
-
-
-//Sticky part, 
